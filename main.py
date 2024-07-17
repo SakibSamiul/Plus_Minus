@@ -1,18 +1,26 @@
-arr = [-4, 3, -9, 0, 4, 1]
-plus = 0
-minus = 0
-zero = 0
+def plusMinus(arr):
+    # Write your code here
+    minus = 0
+    plus = 0
+    zero = 0
+    for element in arr:
+        if element > 0:
+            plus += 1
+        elif element < 0:
+            minus += 1
+        else:
+            zero += 1
+        
+        ratio1 = plus / n
+        ratio2 = minus / n
+        ratio3 = zero / n
+   
+    print(ratio1)
+    print(ratio2)
+    print(ratio3)
+if __name__ == '__main__':
+    n = int(input("Size of an array: ").strip())
 
-for element in arr:
-    if element > 0:
-        plus += 1
-    elif element < 0:
-        minus += 1
-    else:
-        zero += 1
+    arr = list(map(int, input("Elements of array: ").rstrip().split()))
 
-ratio1 = plus / len(arr)
-ratio2 = minus / len(arr)
-ratio3 = zero / len(arr)
-
-print(ratio1, ratio2, ratio3)
+    plusMinus(arr)
